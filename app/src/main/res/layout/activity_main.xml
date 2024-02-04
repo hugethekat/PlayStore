@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-    <!-- Barra de búsqueda -->
+    <!-- Sección Barra de búsqueda -->
     <RelativeLayout
         android:id="@+id/searchandcategories"
         android:layout_width="wrap_content"
@@ -23,14 +23,15 @@
             android:iconifiedByDefault="false"
             android:queryBackground="@android:color/transparent"
             android:queryHint="Search apps and game...">
-
+            <!-- Este es el icon del microfono, pero no se ve porq moví unas cosas-->
             <ImageView
                 android:id="@+id/microphone_image"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:scaleType="fitXY"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
-                android:src="@drawable/mic" />
+                android:src="@drawable/twitch_logo" />
 
         </SearchView>
 
@@ -63,7 +64,7 @@
 
 
     </RelativeLayout>
-    <!-- Categorías -->
+    <!-- Sección Categorías -->
     <LinearLayout
         android:id="@+id/sections_layout"
         android:layout_width="match_parent"
@@ -125,7 +126,7 @@
             android:textStyle="bold" />
 
     </LinearLayout>
-    <!-- Recommended for you -->
+    <!-- Sección Recommended for you -->
     <RelativeLayout
         android:id="@+id/recommended_for_you"
         android:layout_width="match_parent"
@@ -145,7 +146,7 @@
             android:textSize="18sp"
             android:textStyle="bold" />
 
-        <!-- Arrow button -->
+        <!-- Botón flecha -->
         <ImageButton
             android:id="@+id/arrow_button"
             android:layout_width="15dp"
@@ -298,7 +299,7 @@
         android:paddingEnd="16dp"
         android:background="@color/white">
 
-        <!-- Sponsored Suggested for you -->
+        <!-- Sección Sponsored Suggested for you -->
         <TextView
             android:id="@+id/sponsored_text"
             android:layout_width="wrap_content"
