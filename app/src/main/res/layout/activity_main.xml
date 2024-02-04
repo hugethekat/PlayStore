@@ -11,56 +11,59 @@
         android:layout_height="wrap_content"
         android:background="@color/white">
 
-    <SearchView
-        android:id="@+id/search_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="99dp"
-        android:layout_marginBottom="8dp"
-        android:iconifiedByDefault="false"
-        android:background="@drawable/sb_background"
-        android:queryBackground="@android:color/transparent"
-        android:queryHint="Search apps and game...">
+        <SearchView
+            android:id="@+id/search_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="99dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/sb_background"
+            android:iconifiedByDefault="false"
+            android:queryBackground="@android:color/transparent"
+            android:queryHint="Search apps and game...">
 
-        <ImageView
-            android:id="@+id/microphone_image"
+            <ImageView
+                android:id="@+id/microphone_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/mic" />
+
+        </SearchView>
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:src="@drawable/mic"/>
+            android:layout_alignTop="@id/search_view"
+            android:layout_alignParentEnd="true">
 
-    </SearchView>
+            <ImageView
+                android:id="@+id/image1"
+                android:layout_width="38dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="20dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/github" />
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@id/search_view"
-        android:layout_alignParentEnd="true">
+            <ImageView
+                android:id="@+id/image2"
+                android:layout_width="38dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="-14dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="10dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/github" />
 
-        <ImageView
-            android:id="@+id/image1"
-            android:layout_width="38dp"
-            android:layout_height="36dp"
-            android:layout_marginTop="7dp"
-            android:layout_marginEnd="20dp"
-            android:src="@drawable/bell" />
-
-        <ImageView
-            android:id="@+id/image2"
-            android:layout_width="38dp"
-            android:layout_height="36dp"
-            android:layout_marginTop="7dp"
-            android:layout_marginStart="-14dp"
-            android:layout_marginEnd="10dp"
-            android:src="@drawable/user"/>
-
-    </LinearLayout>
+        </LinearLayout>
 
 
     </RelativeLayout>
+
     <LinearLayout
         android:id="@+id/sections_layout"
         android:layout_width="match_parent"
@@ -142,13 +145,15 @@
             android:textStyle="bold" />
 
         <!-- Arrow button -->
-        <ImageView
+        <ImageButton
             android:id="@+id/arrow_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:background="@null"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:src="@drawable/arrow_icon" />
+            android:scaleType="centerCrop"
+            android:src="@drawable/flecha_icon" />
     </RelativeLayout>
 
     <LinearLayout
@@ -178,7 +183,8 @@
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/github"/>
+                    android:src="@drawable/github"
+                    />
 
                 <!-- App name -->
                 <TextView
@@ -214,17 +220,18 @@
                 android:orientation="vertical">
 
                 <!-- App icon -->
+
+                <!-- App name -->
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/app_icon" />
+                    android:src="@drawable/twitch_logo" />
 
-                <!-- App name -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="App Name"
+                    android:text="Twitch"
                     android:textStyle="bold"
                     android:textSize="16sp"
                     android:layout_marginTop="8dp"
@@ -234,7 +241,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="App description"
+                    android:text="4.6 ★"
                     android:textSize="14sp"
                     android:layout_marginTop="4dp"
                     android:layout_marginStart="16dp"/>
@@ -258,13 +265,13 @@
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/app_icon" />
+                    android:src="@drawable/linkedin_logo" />
 
                 <!-- App name -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="App Name"
+                    android:text="LinkedIn: Jobs and..."
                     android:textStyle="bold"
                     android:textSize="16sp"
                     android:layout_marginTop="8dp"
@@ -274,7 +281,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="App description"
+                    android:text="4.3 ★"
                     android:textSize="14sp"
                     android:layout_marginTop="4dp"
                     android:layout_marginStart="16dp"/>
@@ -296,7 +303,7 @@
             android:id="@+id/sponsored_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sponsored"
+            android:text="Sponsored •"
             android:textSize="14sp"
             android:textStyle="bold"
             android:layout_marginTop="16dp"
@@ -307,7 +314,7 @@
             android:id="@+id/suggested_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Suggested for you"
+            android:text=" Suggested for you"
             android:textSize="18sp"
             android:textStyle="bold"
             android:layout_marginTop="16dp"
@@ -318,13 +325,180 @@
         <!-- Three dots button -->
         <ImageButton
             android:id="@id/three_dots_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/three_dots_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/trespuntos_icon"
             android:background="@null"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"/>
 
     </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:layout_marginTop="16dp">
+
+            <!-- Grupo de aplicaciones -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Aplicación 1 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <!-- Imagen de la aplicación -->
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/temu_logo" />
+
+                    <!-- Información de la aplicación -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="16dp">
+
+                        <!-- Nombre de la aplicación -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Temu: Shop Like a Billionaire"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:layout_marginTop="8dp"/>
+
+                        <!-- Descripción de la aplicación -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Shopping • Online marketplace"
+                            android:textSize="14sp"
+                            android:layout_marginTop="4dp"/>
+
+                        <!-- Precio de la aplicación -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4.7 ★ 16 MB"
+                            android:textSize="14sp"
+                            android:layout_marginTop="4dp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <!-- Imagen de la aplicación -->
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/wallmart_logo" />
+
+                    <!-- Información de la aplicación -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="16dp">
+
+                        <!-- Nombre de la aplicación -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Wallmart - Walmart Express - MX"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:layout_marginTop="8dp"/>
+
+                        <!-- Descripción de la aplicación -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Shopping • Retailer"
+                            android:textSize="14sp"
+                            android:layout_marginTop="4dp"/>
+
+                        <!-- Precio de la aplicación -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4.8 ★ 55 MB"
+                            android:textSize="14sp"
+                            android:layout_marginTop="4dp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <!-- Imagen de la aplicación -->
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/aliexpress_logo" />
+
+                    <!-- Información de la aplicación -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="16dp">
+
+                        <!-- Nombre de la aplicación -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="AliExpress"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:layout_marginTop="8dp"/>
+
+                        <!-- Descripción de la aplicación -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Shopping"
+                            android:textSize="14sp"
+                            android:layout_marginTop="4dp"/>
+
+                        <!-- Precio de la aplicación -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4.6 ★ 69 MB"
+                            android:textSize="14sp"
+                            android:layout_marginTop="4dp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>
