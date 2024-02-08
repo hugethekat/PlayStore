@@ -48,7 +48,7 @@
                 android:layout_marginTop="7dp"
                 android:layout_marginEnd="20dp"
                 android:scaleType="fitXY"
-                android:src="@drawable/notif_icon" />
+                android:src="@drawable/notifs" />
             <!-- ponle aquí icons a lo de notis y el otro-->
             <ImageView
                 android:id="@+id/image2"
@@ -58,7 +58,8 @@
                 android:layout_marginTop="7dp"
                 android:layout_marginEnd="10dp"
                 android:scaleType="fitXY"
-                android:src="@drawable/user_icon" />
+                android:src="@drawable/user"
+                android:background="@drawable/user_border"/>
 
         </LinearLayout>
 
@@ -71,60 +72,71 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
+
         <TextView
             android:id="@+id/foryou_txt"
             android:layout_width="2dp"
-            android:layout_height="match_parent"
-            android:layout_marginTop="7dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
             android:layout_weight="1"
             android:background="?attr/selectableItemBackground"
-            android:onClick="onSectionClick"
             android:text="For You"
-            android:textAlignment="center"
             android:textSize="16sp"
             android:textStyle="bold"
-            />
+            android:layout_gravity="start"
+            android:gravity="center" />
+
 
         <TextView
             android:id="@+id/topcharts_txt"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_marginTop="7dp"
+            android:layout_width="2dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
             android:layout_weight="1"
             android:background="?attr/selectableItemBackground"
-            android:onClick="onSectionClick"
-            android:text="Top charts"
-            android:textAlignment="center"
+            android:text="Top Charts"
             android:textSize="16sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_gravity="start"
+            android:gravity="center" />
 
         <TextView
             android:id="@+id/kids_txt"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_marginTop="7dp"
+            android:layout_width="2dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
             android:layout_weight="1"
             android:background="?attr/selectableItemBackground"
-            android:onClick="onSectionClick"
             android:text="Kids"
-            android:textAlignment="center"
             android:textSize="16sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_gravity="start"
+            android:gravity="center" />
 
         <TextView
-            android:id="@+id/categories_txt"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_marginTop="7dp"
+            android:id="@+id/Categories_txt"
+            android:layout_width="2dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="7dp"
             android:layout_weight="1"
             android:background="?attr/selectableItemBackground"
             android:onClick="onSectionClick"
             android:text="Categories"
-            android:textAlignment="center"
             android:textSize="16sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_gravity="start"
+            android:gravity="center" />
 
     </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -136,7 +148,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-    <!-- Sección Recommended for you -->
     <RelativeLayout
         android:id="@+id/recommended_for_you"
         android:layout_width="match_parent"
@@ -182,7 +193,7 @@
             android:paddingEnd="16dp"
             android:background="@color/white">
 
-            <!-- Tarjeta de aplicación 1 -->
+            <!-- GITHUB -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -223,7 +234,7 @@
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Tarjeta de aplicación 2 -->
+            <!-- TWITCH -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -264,7 +275,7 @@
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Tarjeta de aplicación 3 -->
+            <!-- LINKEDIN -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -305,7 +316,7 @@
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Tarjeta de aplicación 4 -->
+            <!-- MINECRAFT-->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -761,7 +772,7 @@
             android:paddingEnd="16dp"
             android:background="@color/white">
 
-            <!-- Tarjeta de aplicación 1 -->
+            <!-- AJUSTES -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -778,13 +789,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="104dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/github" />
+                        android:src="@drawable/ajustes_logo" />
 
                     <!-- Nombre de la aplicación -->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Git Hub"
+                        android:text="Ajustes IOS"
                         android:textStyle="bold"
                         android:textSize="16sp"
                         android:layout_marginTop="8dp"
@@ -794,7 +805,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="4.8 ★"
+                        android:text="2.1 ★"
                         android:textSize="14sp"
                         android:layout_marginTop="4dp"
                         android:layout_marginStart="16dp"/>
@@ -802,7 +813,7 @@
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Tarjeta de aplicación 2 -->
+            <!-- VSCODE -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -819,13 +830,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="105dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/twitch_logo" />
+                        android:src="@drawable/vs" />
 
                     <!-- Nombre de la aplicación -->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Twitch"
+                        android:text="VS Mobile"
                         android:textStyle="bold"
                         android:textSize="16sp"
                         android:layout_marginTop="8dp"
@@ -835,7 +846,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="4.6 ★"
+                        android:text="4.9 ★"
                         android:textSize="14sp"
                         android:layout_marginTop="4dp"
                         android:layout_marginStart="16dp"/>
@@ -843,7 +854,7 @@
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Tarjeta de aplicación 3 -->
+            <!-- ITUNES -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -860,13 +871,13 @@
                         android:layout_width="103dp"
                         android:layout_height="103dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/linkedin_logo" />
+                        android:src="@drawable/musica_logo" />
 
                     <!-- Nombre de la aplicación -->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="LinkedIn: Jobs and..."
+                        android:text="Itunes"
                         android:textStyle="bold"
                         android:textSize="16sp"
                         android:layout_marginTop="8dp"
@@ -876,7 +887,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="4.3 ★"
+                        android:text="3.7 ★"
                         android:textSize="14sp"
                         android:layout_marginTop="4dp"
                         android:layout_marginStart="16dp"/>
@@ -884,7 +895,7 @@
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Tarjeta de aplicación 4 -->
+            <!-- MINECRAFT -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -930,36 +941,55 @@
         </LinearLayout>
     </ScrollView>
 
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <ImageView
-            android:id="@+id/item_image"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="8dp" />
-
-        <TextView
-            android:id="@+id/item_name"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/footer_layout"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/item_image"
-            android:layout_alignTop="@id/item_image"
-            android:layout_marginStart="8dp"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+            android:orientation="horizontal"
+            android:layout_gravity="bottom"
+            android:background="@color/footer">
 
-        <TextView
-            android:id="@+id/item_category"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/item_image"
-            android:layout_below="@id/item_name"
-            android:layout_marginStart="8dp"
-            android:textSize="12sp" />
+            <TextView
+                android:id="@+id/games_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="7dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_footer_background"
+                android:text="Games"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:drawableTop="@drawable/games_icon"
+                android:drawablePadding="5dp" />
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/apps_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="7dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_footer_background"
+                android:text="Apps"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:drawableTop="@drawable/apps_icon"
+                android:drawablePadding="1dp" />
+
+            <TextView
+                android:id="@+id/books_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="7dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_footer_background"
+                android:text="Books"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:drawableTop="@drawable/books_icon"
+                android:drawablePadding="2dp" />
+        </LinearLayout>
+    </FrameLayout>
 </LinearLayout>

@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+    <style name="BoldText">
+        <item name="android:textStyle">bold</item>
+    </style>
     <style name="Theme.CalisDePlaystore" parent="android:Theme.Material.Light.NoActionBar" />
+
 </resources>
