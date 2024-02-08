@@ -48,7 +48,7 @@
                 android:layout_marginTop="7dp"
                 android:layout_marginEnd="20dp"
                 android:scaleType="fitXY"
-                android:src="@drawable/twitch_logo" />
+                android:src="@drawable/notif_icon" />
             <!-- ponle aquí icons a lo de notis y el otro-->
             <ImageView
                 android:id="@+id/image2"
@@ -58,7 +58,7 @@
                 android:layout_marginTop="7dp"
                 android:layout_marginEnd="10dp"
                 android:scaleType="fitXY"
-                android:src="@drawable/twitch_logo" />
+                android:src="@drawable/user_icon" />
 
         </LinearLayout>
 
@@ -69,9 +69,7 @@
         android:id="@+id/sections_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@color/white"
-        >
+        android:orientation="horizontal">
 
         <TextView
             android:id="@+id/foryou_txt"
@@ -84,7 +82,8 @@
             android:text="For You"
             android:textAlignment="center"
             android:textSize="16sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            />
 
         <TextView
             android:id="@+id/topcharts_txt"
@@ -126,6 +125,17 @@
             android:textStyle="bold" />
 
     </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
     <!-- Sección Recommended for you -->
     <RelativeLayout
         android:id="@+id/recommended_for_you"
@@ -158,140 +168,186 @@
             android:src="@drawable/flecha_icon" />
     </RelativeLayout>
 
-    <LinearLayout
-        android:layout_below="@+id/recommended_for_you"
+    <!-- Sección de aplicaciones recomendadas -->
+    <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"
-        android:background="@color/white">
+        android:scrollbars="none">
 
-        <!-- Recommended for you -->
-        <!-- CardView para cada aplicación -->
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="0dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="8dp">
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="@color/white">
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <!-- Tarjeta de aplicación 1 -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_weight="1"
+                android:layout_margin="8dp">
 
-                <!-- Icon de la app -->
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/github"
-                    />
-
-                <!-- Nombre de la app -->
-                <TextView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Git Hub"
-                    android:textStyle="bold"
-                    android:textSize="16sp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginStart="16dp"/>
+                    android:orientation="vertical">
 
-                <!-- App desc -->
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="4.8 ★"
-                    android:textSize="14sp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginStart="16dp"/>
+                    <!-- Icono de la aplicación -->
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="104dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/github" />
 
-            </LinearLayout>
+                    <!-- Nombre de la aplicación -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Git Hub"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="16dp"/>
 
-        </com.google.android.material.card.MaterialCardView>
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="8dp">
+                    <!-- Descripción de la aplicación -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4.8 ★"
+                        android:textSize="14sp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginStart="16dp"/>
 
-            <LinearLayout
-                android:layout_width="match_parent"
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Tarjeta de aplicación 2 -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_weight="1"
+                android:layout_margin="8dp">
 
-                <!-- Icon de la app -->
-
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/twitch_logo" />
-                <!-- Nombre de la app -->
-                <TextView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Twitch"
-                    android:textStyle="bold"
-                    android:textSize="16sp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginStart="16dp"/>
+                    android:orientation="vertical">
 
-                <!-- App desc -->
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="4.6 ★"
-                    android:textSize="14sp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginStart="16dp"/>
+                    <!-- Icono de la aplicación -->
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="105dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/twitch_logo" />
 
-            </LinearLayout>
+                    <!-- Nombre de la aplicación -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Twitch"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="16dp"/>
 
-        </com.google.android.material.card.MaterialCardView>
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="8dp">
+                    <!-- Descripción de la aplicación -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4.6 ★"
+                        android:textSize="14sp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginStart="16dp"/>
 
-            <LinearLayout
-                android:layout_width="match_parent"
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Tarjeta de aplicación 3 -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_weight="1"
+                android:layout_margin="8dp">
 
-                <!-- Icon de la app-->
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/linkedin_logo" />
-
-                <!-- Nombre de la app -->
-                <TextView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="LinkedIn: Jobs and..."
-                    android:textStyle="bold"
-                    android:textSize="16sp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginStart="16dp"/>
+                    android:orientation="vertical">
 
-                <!-- App description -->
-                <TextView
-                    android:layout_width="wrap_content"
+                    <!-- Icono de la aplicación -->
+                    <ImageView
+                        android:layout_width="103dp"
+                        android:layout_height="103dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/linkedin_logo" />
+
+                    <!-- Nombre de la aplicación -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="LinkedIn: Jobs and..."
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="16dp"/>
+
+                    <!-- Descripción de la aplicación -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4.3 ★"
+                        android:textSize="14sp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginStart="16dp"/>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Tarjeta de aplicación 4 -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="4.3 ★"
-                    android:textSize="14sp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginStart="16dp"/>
+                    android:orientation="vertical">
 
-            </LinearLayout>
+                    <!-- Icono de la aplicación -->
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="102dp"
+                        android:background="@drawable/rounded_icon"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/minecraft_logo" />
 
-        </com.google.android.material.card.MaterialCardView>
+                    <!-- Nombre de la aplicación -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Minecraft"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="16dp"/>
 
-    </LinearLayout>
+                    <!-- Descripción de la aplicación -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4.5 ★"
+                        android:textSize="14sp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginStart="16dp"/>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </HorizontalScrollView>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -335,32 +391,32 @@
             android:layout_centerVertical="true"/>
 
     </RelativeLayout>
-    <ScrollView
+    <HorizontalScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"
-            android:layout_marginTop="16dp">
+            android:orientation="horizontal">
 
-            <!-- Grupo de aplicaciones -->
+            <!-- Primer grupo de aplicaciones (izquierda) -->
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:layout_marginTop="16dp">
 
-                <!-- Aplicación 1 -->
+                <!-- Temu -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:layout_marginBottom="8dp">
-
-                    <!-- Imagen de la aplicación -->
+                    <!-- Contenido de la aplicación -->
                     <ImageView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
@@ -400,15 +456,15 @@
                             android:layout_marginTop="4dp"/>
 
                     </LinearLayout>
-
                 </LinearLayout>
+
+                <!-- Walmart -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:layout_marginBottom="8dp">
-
-                    <!-- Imagen de la aplicación -->
+                    <!-- Contenido de la aplicación -->
                     <ImageView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
@@ -426,7 +482,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Wallmart - Walmart Express - MX"
+                            android:text="Walmart - Walmart Express - MX"
                             android:textStyle="bold"
                             android:textSize="16sp"
                             android:layout_marginTop="8dp"/>
@@ -448,15 +504,15 @@
                             android:layout_marginTop="4dp"/>
 
                     </LinearLayout>
-
                 </LinearLayout>
+
+                <!-- AliExpress -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:layout_marginBottom="8dp">
-
-                    <!-- Imagen de la aplicación -->
+                    <!-- Contenido de la aplicación -->
                     <ImageView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
@@ -496,10 +552,414 @@
                             android:layout_marginTop="4dp"/>
 
                     </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Segundo grupo de aplicaciones (derecha) -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:layout_marginTop="16dp">
+
+                <!-- Uber Eats -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+                    <!-- Contenido de la aplicación -->
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ubereats_logo" />
+
+                    <!-- Información de la aplicación -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="16dp">
+
+                        <!-- Nombre de la aplicación -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Uber Eats: Food Delivery"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:layout_marginTop="8dp"/>
+
+                        <!-- Descripción de la aplicación -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Shopping • Food"
+                            android:textSize="14sp"
+                            android:layout_marginTop="4dp"/>
+
+                        <!-- Precio de la aplicación -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4.6 ★ 63 MB"
+                            android:textSize="14sp"
+                            android:layout_marginTop="4dp"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Spotify -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+                    <!-- Contenido de la aplicación -->
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/spotify_logo" />
+
+                    <!-- Información de la aplicación -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="16dp">
+
+                        <!-- Nombre de la aplicación -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Spotify: music and podcast"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:layout_marginTop="8dp"/>
+
+                        <!-- Descripción de la aplicación -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Music and audio"
+                            android:textSize="14sp"
+                            android:layout_marginTop="4dp"/>
+
+                        <!-- Precio de la aplicación -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4.7 ★ 420 MB"
+                            android:textSize="14sp"
+                            android:layout_marginTop="4dp"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Shein -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+                    <!-- Contenido de la aplicación -->
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/shein_logo" />
+
+                    <!-- Información de la aplicación -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="16dp">
+
+                        <!-- Nombre de la aplicación -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="SHEIN-Shopping Online"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:layout_marginTop="8dp"/>
+
+                        <!-- Descripción de la aplicación -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Shopping • Online marketplace"
+                            android:textSize="14sp"
+                            android:layout_marginTop="4dp"/>
+
+                        <!-- Precio de la aplicación -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4.5 ★ 36 MB"
+                            android:textSize="14sp"
+                            android:layout_marginTop="4dp"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <!-- Sección Hecho en México -->
+    <RelativeLayout
+        android:id="@+id/hecho_en_mexico"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+
+        <TextView
+            android:id="@+id/hecho_en_mexicotxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="Hecho en México"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Botón flecha -->
+        <ImageButton
+            android:id="@+id/flecha_button"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:background="@null"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/flecha_icon" />
+    </RelativeLayout>
+
+    <!-- Sección de aplicaciones hechas en méxico -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="@color/white">
+
+            <!-- Tarjeta de aplicación 1 -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Icono de la aplicación -->
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="104dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/github" />
+
+                    <!-- Nombre de la aplicación -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Git Hub"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="16dp"/>
+
+                    <!-- Descripción de la aplicación -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4.8 ★"
+                        android:textSize="14sp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginStart="16dp"/>
 
                 </LinearLayout>
-            </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Tarjeta de aplicación 2 -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Icono de la aplicación -->
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="105dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/twitch_logo" />
+
+                    <!-- Nombre de la aplicación -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Twitch"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="16dp"/>
+
+                    <!-- Descripción de la aplicación -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4.6 ★"
+                        android:textSize="14sp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginStart="16dp"/>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Tarjeta de aplicación 3 -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Icono de la aplicación -->
+                    <ImageView
+                        android:layout_width="103dp"
+                        android:layout_height="103dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/linkedin_logo" />
+
+                    <!-- Nombre de la aplicación -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="LinkedIn: Jobs and..."
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="16dp"/>
+
+                    <!-- Descripción de la aplicación -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4.3 ★"
+                        android:textSize="14sp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginStart="16dp"/>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Tarjeta de aplicación 4 -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Icono de la aplicación -->
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="102dp"
+                        android:background="@drawable/rounded_icon"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/minecraft_logo" />
+
+                    <!-- Nombre de la aplicación -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Minecraft"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="16dp"/>
+
+                    <!-- Descripción de la aplicación -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4.5 ★"
+                        android:textSize="14sp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginStart="16dp"/>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </HorizontalScrollView>
         </LinearLayout>
     </ScrollView>
 
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/item_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp" />
+
+        <TextView
+            android:id="@+id/item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/item_image"
+            android:layout_alignTop="@id/item_image"
+            android:layout_marginStart="8dp"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/item_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/item_image"
+            android:layout_below="@id/item_name"
+            android:layout_marginStart="8dp"
+            android:textSize="12sp" />
+
+    </LinearLayout>
 </LinearLayout>
